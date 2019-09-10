@@ -1,14 +1,29 @@
-package game;
+
 import java.util.ArrayList;
 
 public class BancoDeCartas {
 	private ArrayList<Carta> cartas_Pessoas = new ArrayList<Carta>();
 	private ArrayList<Carta> cartas_Lugar = new ArrayList<Carta>();
 	private ArrayList<Carta> cartas_Arma = new ArrayList<Carta>();
+	public static void addCartasPessoas() throws FileNotFoundException {
+        //Pega o arquivo
+        File file = new File("teste.txt");
+        Scanner inputFile = new Scanner(file);
+
+        //Preenche o array
+        while (inputFile.hasNext()) {
+            cartas_Pessoas.add(inputFile.next());
+        }
+        inputFile.close();
+        
+        //Apartir do arraylist seleciona uma palavra randomica
+//        String palavra = palavras.get((int) (Math.random() * palavras.size()));
+//
+//        return palavra;
+        System.out.println(cartas_Pessoas);
+    }
 	
-	void addCartasPessoas(Carta nova) {
-		this.cartas_Pessoas.add(nova);
-	}
+	
 	void addCartasLugar(Carta nova) {
 		this.cartas_Lugar.add(nova);
 	}
