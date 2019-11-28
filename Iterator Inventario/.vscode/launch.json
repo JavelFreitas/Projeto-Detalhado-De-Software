@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "main.app.iterator.App",
+            "projectName": "Iterator Inventario"
+        }
+    ]
+}
